@@ -18,6 +18,11 @@ body {
 
 
 
+.sidebar {
+    border-left: 2px solid #0056b3;
+    padding-left: 20px;
+}
+
 .sidebar h2 {
     font-family: 'Times New Roman', Times, SimSun, STSong, serif; /* 标题保持现代感 */
     color: #0056b3;
