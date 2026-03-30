@@ -1,0 +1,170 @@
+/* 基础全局设置 */
+body {
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; /* 极简现代的无衬线字体 */
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px; /* 侧边栏和主内容的间距 */
+}
+
+/* ================= 侧边栏 (News) ================= */
+.sidebar {
+    width: 28%;
+    /* Xiangnan He 风格：学术感强的衬线字体 */
+    font-family: 'Times New Roman', Times, serif; 
+    background-color: #fcfcfc;
+    border-left: 4px solid #0056b3; /* 增加一点设计感 */
+    padding: 15px 20px;
+    font-size: 0.95em;
+    height: fit-content;
+}
+
+.sidebar h2 {
+    font-family: 'Source Sans Pro', Arial, sans-serif; /* 标题保持现代感 */
+    color: #0056b3;
+    margin-top: 0;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.news-list li {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.news-list b {
+    color: #555;
+}
+
+/* ================= 主内容区 ================= */
+.main-content {
+    width: 72%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bio h1 {
+    font-size: 2.2em;
+    margin: 0 0 10px 0;
+    color: #111;
+}
+
+.bio p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+/* 图标超链接 (Xixi Wu 风格) */
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #0056b3; /* 统一链接颜色 */
+    margin-right: 15px;
+    font-weight: 500;
+    font-size: 1.05em;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+    color: #003d82;
+}
+
+.photo img {
+    width: 140px;
+    height: 180px;
+    object-fit: cover; /* 保证照片不变形 */
+    border-radius: 8px; /* 轻微圆角，看起来更现代 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eaeaea;
+    margin: 30px 0;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #0056b3; /* 标题下划线强调 */
+    padding-bottom: 5px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* 论文列表 */
+.pub-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pub-list li {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #eee;
+}
+
+.pub-links {
+    margin-top: 5px;
+}
+
+.pub-links a {
+    color: #D88A01; /* 经典的橙黄色论文链接 */
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.pub-links a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    color: #888;
+    font-size: 0.85em;
+    margin-top: 50px;
+}
+
+/* 响应式设计：在手机上自动变为单列显示 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse; /* 手机上让News显示在最下方 */
+    }
+    .sidebar, .main-content {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .header {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .photo {
+        margin-bottom: 20px;
+    }
+}
