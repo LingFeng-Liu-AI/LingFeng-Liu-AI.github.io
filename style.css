@@ -1,6 +1,7 @@
 /* 基础全局设置 */
 body {
-    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif; /* 极简现代的无衬线字体 */
+    /* 首选 Times New Roman，如果没有则用系统默认衬线字体，中文使用宋体 (SimSun) */
+    font-family: 'Times New Roman', Times, SimSun, STSong, serif; 
     line-height: 1.6;
     color: #333;
     background-color: #fff;
@@ -15,20 +16,10 @@ body {
     gap: 50px; /* 侧边栏和主内容的间距 */
 }
 
-/* ================= 侧边栏 (News) ================= */
-.sidebar {
-    width: 28%;
-    /* Xiangnan He 风格：学术感强的衬线字体 */
-    font-family: 'Times New Roman', Times, serif; 
-    background-color: #fcfcfc;
-    border-left: 4px solid #0056b3; /* 增加一点设计感 */
-    padding: 15px 20px;
-    font-size: 0.95em;
-    height: fit-content;
-}
+
 
 .sidebar h2 {
-    font-family: 'Source Sans Pro', Arial, sans-serif; /* 标题保持现代感 */
+    font-family: 'Times New Roman', Times, SimSun, STSong, serif; /* 标题保持现代感 */
     color: #0056b3;
     margin-top: 0;
     border-bottom: 1px dashed #ccc;
